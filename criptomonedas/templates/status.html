@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+    {% block titulo %}Inicio{% endblock %}
+
+    {% block contenido %}
+        <a href="/">Inicio</a>
+        <a href="/purchase">Compra</a>
+        <a>Estado</a>
+        <h2 style="text-align: center;">Estado de la inversión</h2>
+
+        <form action="/status" method="get">
+            <div>
+                {{ sta.invertido.label }}
+                {{ sta.invertido }}
+            </div>
+            <div>
+                {{ sta.valoractual.label }}
+                {{ sta.valoractual }}
+            </div>
+            
+        </form>
+        
+        
+    {% endblock %}

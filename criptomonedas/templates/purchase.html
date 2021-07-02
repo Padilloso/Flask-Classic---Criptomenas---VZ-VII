@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+    {% block titulo %}Compra{% endblock %}
+
+    {% block contenido %}
+        <a href="/">Inicio</a>
+        <a>Compra</a>
+        <a href="/status">Estado</a>
+        <h2 style="text-align: center;">Compra de Criptos</h2>
+            
+        <form action="/purchase" method="post">
+            <fieldset class="container">
+            
+            {{ form.hidden_tag() }}
+            
+            
+                <div>
+                    <label for="date">Fecha</label>
+                    {{ form.date() }}
+                </div>
+                <div>
+                    <label for="time">Hora</label>
+                    {{ form.time() }}
+                </div>       
+                <div>
+                    <label for="moneda_from">Moneda From</label>
+                    {{ form.moneda_from() }}
+                    {% for error in form.moneda_from.errors %}
+                        
+                    {% endfor %}  
+                </div>
+                <div>
+                    <label for="cantidad_from">Cantidad From</label>
+                    {{ form.cantidad_from() }}
+                    {% for error in form.cantidad_from.errors %}
+                        
+                    {% endfor %}  
+
+                </div>
+                <div>
+                    <label for="moneda_to">Moneda To</label>
+                    {{ form.moneda_to() }}
+                    {% for error in form.moneda_to.errors %}
+                        
+                    {% endfor %}  
+                </div>
+                <div>
+                    <label for="cantidad_to">Cantidad To</label>
+                    {{ form.cantidad_to }}<br></br>
+                </div>  
+            </fieldset>
+            <input type="submit" name="submit" value="Aceptar">
+            <input type="submit" name="calculadora" value="Calculadora"> 
+        </form>  
+
+    {% endblock %}

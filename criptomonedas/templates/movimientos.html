@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+    {% block titulo %}Inicio{% endblock %}
+
+    {% block contenido %}
+        <a>Inicio</a>
+        <a href="/purchase">Compra</a>
+        <a href="/status">Estado</a>
+        <h2 style="text-align: center;">Movimientos</h2>
+        <table>
+            <tr>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Tipo de moneda(From)</th>
+                <th>Cantidad(From)</th>
+                <th>Tipo de moneda(To)</th>
+                <th>Cantidad(To)</th>
+            </tr>
+           {% for movimiento in datos %}
+           <tr>
+                <td>{{ movimiento.date }}</td>
+                <td>{{ movimiento.time }}</td>
+                <td>{{ movimiento.moneda_from }}</td>
+                <td>{{ movimiento.cantidad_from }}</td>
+                <td>{{ movimiento.moneda_to }}</td>
+                <td>{{ movimiento.cantidad_to }}</td>
+
+           </tr>
+           {% endfor %}
+        </table>
+       
+    {% endblock %}

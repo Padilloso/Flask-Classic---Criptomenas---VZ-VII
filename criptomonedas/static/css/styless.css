@@ -1,0 +1,21 @@
+.principal{
+    font-weight: bold;
+    text-align: left;
+    background-color:rgb(231, 223, 223);
+    
+}
+
+.msg-err {
+    font-size: 0.8em;
+    color: darkred;
+    font-weight: bold;
+    margin-left: 105px;
+}
+
+.popup {
+    background-color: floralwhite;
+    text-align: center;
+    font-weight: bold;
+    color: darkred;
+    font-size: x-large;
+   }

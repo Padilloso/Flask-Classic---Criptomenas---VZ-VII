@@ -5,16 +5,18 @@
         <a href="/">Inicio</a>
         <a href="/purchase">Compra</a>
         <a>Estado</a>
-        <h2 style="text-align: center;">Estado de la inversión</h2>
+        <h2 style="text-align: center;" class="secundarios">Estado de la inversión</h2><br></br>
 
         <form action="/status" method="get">
             <div>
-                {{ sta.invertido.label }}
-                {{ sta.invertido }}
-            </div>
+                <label for="invertido" class="status">Cantidad Invertida 'EUR'</label><br></br>
+                <input  disabled type="text" name="invertido" class="invertido" value="{{ sta.invertido }}"><br></br>
+                
+            </div><br></br>
             <div>
-                {{ sta.valoractual.label }}
-                {{ sta.valoractual }}
+                <label for="valoractual" class="status">Valor Actual 'EUR'</label><br></br>
+                <input disabled type="text" name="valoractual" class="invertido" value="{{ sta.valoractual }}"><br></br>
+                
             </div>
             
         </form>

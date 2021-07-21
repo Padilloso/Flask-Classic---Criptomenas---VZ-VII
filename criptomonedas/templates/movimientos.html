@@ -5,15 +5,16 @@
         <a>Inicio</a>
         <a href="/purchase">Compra</a>
         <a href="/status">Estado</a>
-        <h2 style="text-align: center;">Movimientos</h2>
+        <h2 style="text-align: center;" class="secundarios">Movimientos</h2>
         <table>
             <tr>
-                <th>Fecha</th>
-                <th>Hora</th>
-                <th>Tipo de moneda(From)</th>
-                <th>Cantidad(From)</th>
-                <th>Tipo de moneda(To)</th>
-                <th>Cantidad(To)</th>
+                <th class="movimientos">Fecha</th>
+                <th class="movimientos">Hora</th>
+                <th class="movimientos">Tipo de moneda(From)</th>
+                <th class="movimientos">Cantidad(From)</th>
+                <th class="movimientos">Tipo de moneda(To)</th>
+                <th class="movimientos">Cantidad(To)</th>
+            
             </tr>
            {% for movimiento in datos %}
            <tr>
@@ -23,6 +24,7 @@
                 <td>{{ movimiento.cantidad_from }}</td>
                 <td>{{ movimiento.moneda_to }}</td>
                 <td>{{ movimiento.cantidad_to }}</td>
+                
 
            </tr>
            {% endfor %}

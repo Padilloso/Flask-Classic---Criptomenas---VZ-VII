@@ -19,3 +19,42 @@
     color: darkred;
     font-size: x-large;
    }
+
+.status {
+    font-size: x-large;
+    color: palevioletred;
+    text-shadow: 7px 4px 5px lightpink;
+}
+
+.invertido {
+    font-size: x-large;
+    font-weight: bold;
+    
+}
+
+.movimientos {
+    font-weight: bold;
+    color: palevioletred;
+    text-shadow: 7px 4px 5px lightpink;
+}
+
+.compras{
+    font-weight: bold;
+    color: palevioletred;
+    text-shadow: 7px 4px 5px lightpink;
+
+}
+
+.boton {
+    color: blue;
+}
+
+.secundarios {
+    font-weight: bold;
+    color: purple;
+    text-shadow: 7px 4px 5px palevioletred;
+}
+
+.to {
+    
+}

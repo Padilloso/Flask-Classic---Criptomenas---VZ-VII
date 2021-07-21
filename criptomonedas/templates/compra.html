@@ -15,22 +15,22 @@
             
                 <div>
                     <label for="date" class="compras">Fecha</label>
-                    {{ form.date() }}
+                    <input type="text" name="date" readonly value="{{ form.date.data }}">
                 </div>
                 <div>
                     <label for="time" class="compras">Hora</label>
-                    {{ form.time() }}
+                    <input type="text" name="time" readonly value="{{ form.time.data }}">
                 </div>       
                 <div>
                     <label for="moneda_from" class="compras">Moneda From</label>
-                    {{ form.moneda_from() }}
+                    <input type="text" name="moneda_from" readonly value="{{ form.moneda_from.data }}">
                     {% for error in form.moneda_from.errors %}
                         
                     {% endfor %}  
                 </div>
                 <div>
                     <label for="cantidad_from" class="compras">Cantidad From</label>
-                    {{ form.cantidad_from() }}
+                    <input type="text" name="cantidad_from" readonly value="{{ form.cantidad_from.data }}">
                     {% for error in form.cantidad_from.errors %}
                         
                     {% endfor %}  
@@ -38,18 +38,18 @@
                 </div>
                 <div>
                     <label for="moneda_to" class="compras">Moneda To</label>
-                    {{ form.moneda_to() }}
+                    <input type="text" name="moneda_to" readonly value="{{ form.moneda_to.data }}">
                     {% for error in form.moneda_to.errors %}
                         
                     {% endfor %}  
                 </div>
                 <div>
                     <label for="cantidad_to" class="compras">Cantidad To</label>
-                    <input type="text" name="cantidad_to" readonly value="{{ cantidad_to }}"><br></br>
+                    <input type="text" name="cantidad_to" readonly value="{{ form.cantidad_to }}"><br></br>
                 </div>
                  
             </fieldset>
-            <input disabled type="submit" name="submit"  value="Aceptar">
+            <input type="submit" name="submit" value="Aceptar">
             <input type="submit" name="calculadora" value="Calculadora"> 
         </form>  
 

@@ -3,7 +3,7 @@ from flask_wtf.recaptcha import validators
 from wtforms import DateField
 from wtforms.fields.core import BooleanField, FloatField, SelectField, StringField,TimeField
 from wtforms.fields.simple import HiddenField, SubmitField
-from wtforms.validators import DataRequired, Length, ValidationError
+from wtforms.validators import DataRequired, Length, NumberRange, ValidationError
 from datetime import date, datetime
 
 
@@ -29,6 +29,7 @@ class MovimientosForm(FlaskForm):
     cantidad_from = FloatField("Cantidad",validators=[DataRequired()])
     moneda_to = SelectField("Tipo de moneda", choices=[("EUR"),("ETH"),("LTC"),("BNB"),("EOS"),("XLM"),("BTC"),("XRP"),("BCH"),("USDT"),("BSV"),("ADA"),("TRX")],validators=[DataRequired()])
     cantidad_to = StringField("Cantidad")
+    precioUnidad = StringField("Precio Unidad")
     submit = SubmitField("Aceptar")
     calculadora = SubmitField("Calcular")
 

@@ -1,3 +1,4 @@
+from wtforms.fields.core import FloatField
 import criptomonedas
 from criptomonedas.forms import Estado, MovimientosForm
 from flask import Flask
@@ -47,8 +48,6 @@ def nuevo():
     elif formulario.moneda_from.data == formulario.moneda_to.data:
         flash("LA MONEDA FROM Y LA MONEDA TO NO PUEDEN SER IGUALES")
         return render_template("purchase.html", form = formulario)
-
-
 
     elif  not resultado:
         while formulario.moneda_from.data != 'EUR' :
@@ -192,7 +191,7 @@ def nuevo():
 
                         return redirect(url_for("index"))
                     
-            
+    flash("La cantidad que quiere calcular debe ser introducida en números")      
     return render_template("purchase.html",form = formulario)
 
 

@@ -15,11 +15,11 @@
             
                 <div>
                     <label for="date" class="compras">Fecha</label>
-                    {{ form.date() }}
+                    <input type="text" name="date" readonly value="{{ form.date.data }}">
                 </div>
                 <div>
                     <label for="time" class="compras">Hora</label>
-                    {{ form.time() }}
+                    <input type="text" name="time" readonly value="{{ form.time.data }}">
                 </div>       
                 <div>
                     <label for="moneda_from" class="compras">Moneda From</label>

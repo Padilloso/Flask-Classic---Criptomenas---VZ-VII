@@ -45,14 +45,17 @@ def nuevo():
     if request.method==["GET"]:
         return render_template("calcular.html",form=formulario)
 
-    elif formulario.moneda_from.data == formulario.moneda_to.data:
-        flash("LA MONEDA FROM Y LA MONEDA TO NO PUEDEN SER IGUALES")
+    elif formulario.cantidad_from.data == None:
+        flash("La cantidad que quiere calcular debe ser introducida en números")
         return render_template("purchase.html", form = formulario)
+
 
     elif  not resultado:
         while formulario.moneda_from.data != 'EUR' :
             flash("LA PRIMERA COMPRA TIENE QUE SER DE EUROS('EUR') A UNA CRIPTOMONEDA , GRACIAS.","error")
             return render_template("purchase.html", form = formulario)
+    
+
                   
         else:
             
@@ -66,8 +69,12 @@ def nuevo():
                 
                 if "calculadora" in request.form:
                     try:
-
-                        dbManager.consultaMuchasSQL(query,[formulario.date.data, formulario.time.data, formulario.moneda_from.data, formulario.cantidad_from.data, formulario.moneda_to.data, formulario.cantidad_to])
+                        if formulario.moneda_from.data == formulario.moneda_to.data:
+                            flash("LA MONEDA FROM Y LA MONEDA TO NO PUEDEN SER IGUALES")
+                            return render_template("purchase.html", form = formulario)
+                       
+                        else:
+                            dbManager.consultaMuchasSQL(query,[formulario.date.data, formulario.time.data, formulario.moneda_from.data, formulario.cantidad_from.data, formulario.moneda_to.data, formulario.cantidad_to])
 
                     except sqlite3.Error as el_error:
                         print("Se ha producido un error en SQLITE3",el_error)
@@ -106,8 +113,12 @@ def nuevo():
                     
                     if "calculadora" in request.form:
                         try:
-
-                            dbManager.consultaMuchasSQL(query,[formulario.date.data, formulario.time.data, formulario.moneda_from.data, formulario.cantidad_from.data, formulario.moneda_to.data, formulario.cantidad_to])
+                            if formulario.moneda_from.data == formulario.moneda_to.data:
+                                flash("LA MONEDA FROM Y LA MONEDA TO NO PUEDEN SER IGUALES")
+                                return render_template("purchase.html", form = formulario)
+                            
+                            else:
+                                dbManager.consultaMuchasSQL(query,[formulario.date.data, formulario.time.data, formulario.moneda_from.data, formulario.cantidad_from.data, formulario.moneda_to.data, formulario.cantidad_to])
 
                         except sqlite3.Error as el_error:
                             print("Se ha producido un error en SQLITE3",el_error)
@@ -168,8 +179,12 @@ def nuevo():
                     
                     if "calculadora" in request.form:
                         try:
-
-                            dbManager.consultaMuchasSQL(query,[formulario.date.data, formulario.time.data, formulario.moneda_from.data, formulario.cantidad_from.data, formulario.moneda_to.data, formulario.cantidad_to])
+                            if formulario.moneda_from.data == formulario.moneda_to.data:
+                                flash("LA MONEDA FROM Y LA MONEDA TO NO PUEDEN SER IGUALES")
+                                return render_template("purchase.html", form = formulario)
+                            
+                            else:
+                                dbManager.consultaMuchasSQL(query,[formulario.date.data, formulario.time.data, formulario.moneda_from.data, formulario.cantidad_from.data, formulario.moneda_to.data, formulario.cantidad_to])
 
                         except sqlite3.Error as el_error:
                             print("Se ha producido un error en SQLITE3",el_error)
@@ -191,7 +206,7 @@ def nuevo():
 
                         return redirect(url_for("index"))
                     
-    flash("La cantidad que quiere calcular debe ser introducida en números")      
+          
     return render_template("purchase.html",form = formulario)
 
 

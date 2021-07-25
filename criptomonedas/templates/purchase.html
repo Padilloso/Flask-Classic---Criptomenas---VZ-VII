@@ -2,9 +2,9 @@
     {% block titulo %}Compra{% endblock %}
 
     {% block contenido %}
-        <a href="/">Inicio</a>
-        <a>Compra</a>
-        <a href="/status">Estado</a>
+        <a href="/" class="titusecun">Inicio &nbsp;</a>
+        <a class="titusecun"><u>Compra</u> &nbsp;</a>
+        <a href="/status" class="titusecun">Estado</a>
         <h2 style="text-align: center;" class="secundarios">Compra de Criptos</h2>
             
         <form action="/purchase" method="post">
@@ -49,6 +49,45 @@
                 </div>
                  
             </fieldset>
+                <h3 for="monedero" class="secundarios">Monedero</h3><br>
+                </div>
+                <div style="float: left;">
+                    <label for="moneda2">ETH</label><input type="text"  style="width : 250px; height : 50px" name="ETH" value="{{ mon.moneda2 }}">    
+                </div>
+                <div style="float: left;">
+                    <label for="moneda3">LTC</label><input type="text" style="width : 250px; height : 50px" name="LTC" value="{{ mon.moneda3 }}">
+                </div>
+                <div style="float: left;">
+                    <label for="moneda4">BNB</label><input type="text" style="width : 250px; height : 50px" name="BNB" value="{{ mon.moneda4 }}">
+                </div>
+                <div style="float: left;">
+                    <label for="moneda5">EOS</label><input type="text" style="width : 250px; height : 50px" name="EOS" value="{{ mon.moneda5 }}">
+                </div>
+                <div style="float: left;">
+                    <label for="moneda6">XLM</label><input type="text" style="width : 250px; height : 50px" name="XLM" value="{{ mon.moneda6 }}">
+                </div>
+                <div style="float: left;">
+                    <label for="moneda7">BTC</label><input type="text" style="width : 250px; height : 50px" name="BTC" value="{{ mon.moneda7 }}">
+                </div>
+                <div style="float: left;">
+                    <label for="moneda8">XRP</label><input type="text" style="width : 250px; height : 50px" name="XRP" value="{{ mon.moneda8 }}">
+                </div>
+                <div style="float: left;">
+                    <label for="moneda9">BCH</label><input type="text" style="width : 250px; height : 50px" name="BCH" value="{{ mon.moneda9 }}">
+                </div>
+                <div style="float: left;">
+                    <label for="moneda10">USDT</label><input type="text" style="width : 250px; height : 50px" name="USDT" value="{{ mon.moneda10 }}">  
+                </div>
+                <div style="float: left;">
+                    <label for="moneda11">BSV</label><input type="text" style="width : 250px; height : 50px" name="BSV" value="{{ mon.moneda11 }}">
+                </div>
+                <div style="float: left;">
+                    <label for="moneda12">ADA</label><input type="text" style="width : 250px; height : 50px" name="ADA" value="{{ mon.moneda12 }}">
+                </div>
+                <div style="float: left;">
+                    <label for="moneda13">TRX</label><input type="text" style="width : 250px; height : 50px" name="TRX" value="{{ mon.moneda13 }}">
+                </div><br></br>
+                                      
             <input disabled type="submit" name="submit"  value="Aceptar">
             <input type="submit" name="calculadora" value="Calculadora"> 
         </form>  

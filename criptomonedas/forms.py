@@ -5,6 +5,7 @@ from wtforms.fields.core import BooleanField, FloatField, SelectField, StringFie
 from wtforms.fields.simple import HiddenField, SubmitField
 from wtforms.validators import DataRequired, Length, NumberRange, ValidationError
 from datetime import date, datetime
+from criptomonedas.dataaccess import *
 
 
 
@@ -20,7 +21,6 @@ def clock():
 
 
 
-
 class MovimientosForm(FlaskForm):
     id = HiddenField()
     date = StringField("Fecha",default=today())
@@ -32,9 +32,25 @@ class MovimientosForm(FlaskForm):
     precioUnidad = StringField("Precio Unidad")
     submit = SubmitField("Aceptar")
     calculadora = SubmitField("Calcular")
+    monedero = StringField("Monedero")
 
 
 class Estado(FlaskForm):
     invertido = FloatField()
     valoractual = FloatField()
 
+
+class Monedero(FlaskForm):
+    moneda1= StringField()
+    moneda2 = StringField() 
+    moneda3 = StringField()
+    moneda4 = StringField()
+    moneda5 = StringField() 
+    moneda6 = StringField()
+    moneda7 = StringField()
+    moneda8 = StringField()
+    moneda9 = StringField()
+    moneda10 = StringField()
+    moneda11 = StringField()
+    moneda12 = StringField()
+    moneda13= StringField() 

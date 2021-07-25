@@ -14,11 +14,6 @@
         FlaskClassic - Criptomonedas - VZ VII
     </header>
     <h1>Mis Criptomonedas</h1>
-    <section class="container">
-        
-        {% block contenido %}{% endblock %}
-        
-    </section>
     {% with mensajes = get_flashed_messages(with_categories = true) %}<p></p>
         {% if mensajes %}
         <div class="popup">
@@ -28,6 +23,12 @@
         </div>
         {% endif %}
     {% endwith %}
+    <section class="container">
+        
+        {% block contenido %}{% endblock %}
+        
+    </section>
+    
     <footer>
         &copy; Todos los derechos reservados 2021
     </footer>

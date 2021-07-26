@@ -12,7 +12,9 @@ Es un proyecto basado en consultas de precios reales de criptomonedas en una API
 	**Activarlo** :  Si tu sistema operativo es **Windows** :  venv\Scripts\activate  si es **MAC OS**: source venv/bin/activate
 
 1. Instalar las dependencias del fichero requirements.txt
+
   	 pip install -r requirements.txt
+
 1. Duplicar el fichero .env_template y renombrar a .env
        
 	   Los valores deben ser:
@@ -25,6 +27,8 @@ Es un proyecto basado en consultas de precios reales de criptomonedas en una API
 1. Abrir el navegador , introducir la dirección que se le asignará . Ej : localhost:5000 y a disfrutar.
 ## Soporte
 Si tiene alguna duda puede consultar algunas de las páginas que le dejo a continuación:
+
+
 [Página oficial de precios ](https://coinmarketcap.com/es/ "Página oficial de precios ")
 
 

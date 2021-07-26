@@ -58,3 +58,8 @@
 .titusecun {
     font-size: x-large
 }
+
+.negrita {
+    color: black;
+    text-shadow: 7px 4px 5px gray;
+}

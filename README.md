@@ -1,10 +1,10 @@
 ##  FlaskClassic - Criptomonedas - VZ VII
 
-Es un proyecto basado en consultas de precios reales de criptomonedas en una API externa llamada **Coinmarketcap** , las consultas y compras se realizaran con **dinero ficticio **.
+Es un proyecto basado en consultas de precios reales de criptomonedas en una API externa llamada **Coinmarketcap** , las consultas y compras se realizaran con **dinero ficticio**.
 
 ## Instalación
 1. Crear entorno virtual y activarlo.
-      **Crearlo** :  python -m venv venv       **ó **      python3 -m venv venv 
+      **Crearlo** :  python -m venv venv **ó** python3 -m venv venv 
 	  **Activarlo** :  Si tu sistema operativo es **Windows** :  venv\Scripts\activate  si es **MAC OS**: source venv/bin/activate
 
 1. Instalar las dependencias del fichero requirements.txt
@@ -22,5 +22,9 @@ Es un proyecto basado en consultas de precios reales de criptomonedas en una API
 ## Soporte
 Si tiene alguna duda puede consultar algunas de las páginas que le dejo a continuación:
 [Página oficial de precios ](https://coinmarketcap.com/es/ "Página oficial de precios ")
+
+
 [HTML](https://www.w3schools.com/html/ "HTML")
+
+
 [CSS/WEB](https://developer.mozilla.org/es/docs/Web/CSS "CSS/WEB")

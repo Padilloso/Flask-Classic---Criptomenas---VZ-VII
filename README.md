@@ -4,8 +4,12 @@ Es un proyecto basado en consultas de precios reales de criptomonedas en una API
 
 ## Instalación
 1. Crear entorno virtual y activarlo.
+
+
       **Crearlo** :  python -m venv venv **ó** python3 -m venv venv 
-	  **Activarlo** :  Si tu sistema operativo es **Windows** :  venv\Scripts\activate  si es **MAC OS**: source venv/bin/activate
+
+
+	**Activarlo** :  Si tu sistema operativo es **Windows** :  venv\Scripts\activate  si es **MAC OS**: source venv/bin/activate
 
 1. Instalar las dependencias del fichero requirements.txt
   	 pip install -r requirements.txt

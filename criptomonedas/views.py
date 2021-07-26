@@ -90,7 +90,7 @@ def nuevo():
 
                 api.apiErrores()
 
-                if api.apiErrores() != 0:
+                if api.apiErrores() != 200:
                     flash("Error en la API Key , compruebe que está introducida correctamente , gracias. ")
                     return render_template("purchase.html", form = formulario , mon = mon)
 
@@ -144,7 +144,7 @@ def nuevo():
                 if formulario.validate():
                     api.apiErrores()
 
-                    if api.apiErrores() != 0:
+                    if api.apiErrores() != 200:
                         flash("Error en la API Key , compruebe que está introducida correctamente , gracias. ")
                         return render_template("purchase.html", form = formulario , mon = mon)
                     else:
@@ -221,7 +221,7 @@ def nuevo():
                 else:
                     api.apiErrores()
 
-                    if api.apiErrores() != 0:
+                    if api.apiErrores() != 200:
                         flash("Error en la API Key , compruebe que está introducida correctamente , gracias. ")
                         return render_template("purchase.html", form = formulario , mon = mon)
                     else:

@@ -61,9 +61,10 @@ class api():
     session = Session()
     session.headers.update(headers)
     response = session.get(url, params=parameters)
-    consulta = json.loads(response.text)
-    print(parameters)
-    errorKey = consulta['status']['error_code'] 
+    
+    
+    
+    errorKey = response.status_code
     return(errorKey)
 
 
